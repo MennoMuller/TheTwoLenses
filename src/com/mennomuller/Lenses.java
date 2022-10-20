@@ -24,7 +24,7 @@ public class Lenses {
 
     public static List<Integer> lens2(int[] inputs) {
         return Arrays.stream(inputs).filter(i -> i % 2 == 0)
-                .sorted().map(i -> i * 2).collect(Collectors.toList());
+                .sorted().map(i -> i * 2).boxed().collect(Collectors.toList());
 
     }
 }
